@@ -209,7 +209,7 @@ Practice accessing data above by console.log-ing following items:
 
 //(1) Name of the first artist (0th index) in the array
   
-  console.log('task 1', artists[0].name);
+  console.log('task 1', artists[0].paintings);
 
 
 //(2) Bio of the third artist (2nd index) in the array 
@@ -221,7 +221,7 @@ Practice accessing data above by console.log-ing following items:
 There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
 
   artists[8].name = 'Vincent Van Gogh';
-  console.log('task 2', artists[8].name)
+  // console.log('task 2', artists[8].name)
 
 
 
@@ -237,7 +237,7 @@ function getArtistByIndex(array, num) {
   return `the artist at index ${num} is ${array[num].name}`
 }
 
-console.log('task 3', getArtistByIndex(artists, 8));
+// console.log('task 3', getArtistByIndex(artists, 8));
 
 
 
@@ -276,7 +276,7 @@ function removeArtist(array, num) {
   return array.length - 1;
 }
 
-console.log('task 5', removeArtist(artists, 0))
+// console.log('task 5', removeArtist(artists, 0))
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -308,7 +308,7 @@ function addArtist(array) {
   return array
 }
 
-console.log('task 6', addArtist(artists));
+// console.log('task 6', addArtist(artists));
 
 
 
@@ -319,9 +319,16 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/) {
-  /*Your Code Here*/
+function lotsOfArt(array) {
+  const newArray =[]
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].paintings >= 100) {
+      newArray.push(array[i].name);
+    }
+  }
+  return newArray;
 }
+console.log('task 7',lotsOfArt(artists));
 
 
 /* ***** END OF TASKS ***** */
