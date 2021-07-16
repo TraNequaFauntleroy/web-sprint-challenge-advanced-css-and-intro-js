@@ -177,6 +177,12 @@ button:hover{
 
     .artist .bio {
         font-size: 1rem;
+        margin-bottom: 10%;
+    }
+
+    .artist a {
+        font-size: 1.7rem;
+        margin-top: 7%;
     }
 
     .artists-container {
