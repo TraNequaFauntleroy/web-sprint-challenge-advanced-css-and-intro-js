@@ -134,3 +134,12 @@ button:hover{
 .artist img{
     width:100%;
 }
+
+/* MEDIA QUERIES */
+
+@media(max-width: 500px) {
+    nav a {
+        display: flex;
+        justify-content: space-between;
+    }
+}
