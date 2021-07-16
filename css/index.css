@@ -138,6 +138,7 @@ button:hover{
 /* MEDIA QUERIES */
 
 @media(max-width: 500px) {
+    /*HEADER STYLES */
    nav a {
        margin: 0 7%;
    }
@@ -147,6 +148,7 @@ button:hover{
        align-items: center;
        justify-content: center;
    }
+   /*Title Section Styles*/
 
     .title-container div {
         height: 35vh;
@@ -158,6 +160,8 @@ button:hover{
         font-size: 4rem;
         font-weight: 600;
     }
+
+    /*Artists Section Styles */
 
     .artist {
         width: 100%;
