@@ -165,17 +165,19 @@ button:hover{
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        
-        
+    }
+
+    .artist img {
+        height: 15vh;
+    }
+
+    .artist .bio {
+        font-size: 1rem;
     }
 
     .artists-container {
         flex-direction: column;
-        /* margin: 0 10%; */
         box-sizing: border-box;
         padding: 0 15% 0 15%;
-        
-        
-    
     }
 }
