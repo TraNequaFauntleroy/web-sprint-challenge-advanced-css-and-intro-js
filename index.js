@@ -214,6 +214,7 @@ Practice accessing data above by console.log-ing following items:
 
 //(2) Bio of the third artist (2nd index) in the array 
 
+console.log('task 1.2', artists[2].bio);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -221,7 +222,7 @@ Practice accessing data above by console.log-ing following items:
 There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
 
   artists[8].name = 'Vincent Van Gogh';
-  // console.log('task 2', artists[8].name)
+  console.log('task 2', artists[8].name)
 
 
 
@@ -237,7 +238,7 @@ function getArtistByIndex(array, num) {
   return `the artist at index ${num} is ${array[num].name}`
 }
 
-// console.log('task 3', getArtistByIndex(artists, 8));
+console.log('task 3', getArtistByIndex(artists, 8));
 
 
 
@@ -250,17 +251,18 @@ Example born in 1901 and died in 1959 - included -- born in 1889 and died in 192
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 // Hint - Look up the .split() method
 
-// function get20s(array, key, key2) {
-//   const newArray = [];
-//   for (let i=0; i < array.length; i++){
-//     if (array[i][key] <= 2000 && array[i][key] >= 1900 ) {
-//       newArray.push(array[i][key2]);
-//     }
-//   }
-//   return newArray;
-// }
+function get20s(array) {
+  const newArray = [];
+  for (let i=0; i < array.length; i++){
+    const yearFinder = array[i].years;
+    if (yearFinder <= '2000' && yearFinder >= '1900') {
+      newArray.push(array[i].name);
+    }
+  }
+  return newArray;
+}
 
-// console.log('task 4', get20s(artists, 'years', 'name'))
+console.log('task 4', get20s(artists));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use removeArtist to do the following:
@@ -320,7 +322,7 @@ Use lotsOfArt to do the following:
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
 function lotsOfArt(array) {
-  const newArray =[]
+  const newArray =[];
   for (let i = 0; i < array.length; i++) {
     if (array[i].paintings >= 100) {
       newArray.push(array[i].name);
@@ -345,7 +347,7 @@ foo();
 module.exports = {
   foo,
   getArtistByIndex,
-  // get20s,
+  get20s,
   removeArtist,
   addArtist,
   lotsOfArt
