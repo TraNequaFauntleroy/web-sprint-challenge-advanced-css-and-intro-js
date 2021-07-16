@@ -252,10 +252,12 @@ If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 // Hint - Look up the .split() method
 
 function get20s(array) {
+  console.log('task 4', artists)
   const newArray = [];
   for (let i=0; i < array.length; i++){
     const yearFinder = array[i].years;
-    if (yearFinder <= '2000' && yearFinder >= '1900') {
+    if (yearFinder.split(' - ')) {
+      console.log('TEST', yearFinder);
       newArray.push(array[i].name);
     }
   }
@@ -263,6 +265,7 @@ function get20s(array) {
 }
 
 console.log('task 4', get20s(artists));
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use removeArtist to do the following:
@@ -331,6 +334,9 @@ function lotsOfArt(array) {
   return newArray;
 }
 console.log('task 7',lotsOfArt(artists));
+
+
+
 
 
 /* ***** END OF TASKS ***** */
