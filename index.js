@@ -295,9 +295,20 @@ Use addArtist to do the following:
 
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
-function addArtist(/*Your Code Here*/) {
-  /*Your Code Here*/
+const nene ={
+  id: 20,
+  name: 'TraNequa', 
+  years: '1991 - 2021',
+  genre: 'Web Design', 
+  nationality: 'American',
+  bio: 'I love food. I also love my kids.'
 }
+function addArtist(array) {
+  array.push({nene});
+  return array
+}
+
+console.log('task 6', addArtist(artists));
 
 
 
